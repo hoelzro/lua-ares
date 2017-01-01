@@ -96,6 +96,61 @@ potentially calling the reply handler if the query has been completed.
 
 ## Unbound Functions
 
+The following functions have no binding - contributions adding them are welcome!
+
+  * [ares_cancel](https://c-ares.haxx.se/ares_cancel)
+  * [ares_create_query](https://c-ares.haxx.se/ares_create_query)
+  * [ares_dup](https://c-ares.haxx.se/ares_dup)
+  * [ares_expand_name](https://c-ares.haxx.se/ares_expand_name)
+  * [ares_expand_string](https://c-ares.haxx.se/ares_expand_string)
+  * [ares_get_servers](https://c-ares.haxx.se/ares_get_servers)
+  * [ares_get_servers_ports](https://c-ares.haxx.se/ares_get_servers_ports)
+  * [ares_gethostbyaddr](https://c-ares.haxx.se/ares_gethostbyaddr)
+  * [ares_gethostbyname](https://c-ares.haxx.se/ares_gethostbyname)
+  * [ares_gethostbyname_file](https://c-ares.haxx.se/ares_gethostbyname_file)
+  * [ares_getnameinfo](https://c-ares.haxx.se/ares_getnameinfo)
+  * [ares_getsock](https://c-ares.haxx.se/ares_getsock)
+  * [ares_inet_ntop](https://c-ares.haxx.se/ares_inet_ntop)
+  * [ares_inet_pton](https://c-ares.haxx.se/ares_inet_pton)
+  * [ares_mkquery](https://c-ares.haxx.se/ares_mkquery)
+  * [ares_parse_a_reply](https://c-ares.haxx.se/ares_parse_a_reply)
+  * [ares_parse_aaaa_reply](https://c-ares.haxx.se/ares_parse_aaaa_reply)
+  * [ares_parse_mx_reply](https://c-ares.haxx.se/ares_parse_mx_reply)
+  * [ares_parse_naptr_reply](https://c-ares.haxx.se/ares_parse_naptr_reply)
+  * [ares_parse_ns_reply](https://c-ares.haxx.se/ares_parse_ns_reply)
+  * [ares_parse_ptr_reply](https://c-ares.haxx.se/ares_parse_ptr_reply)
+  * [ares_parse_soa_reply](https://c-ares.haxx.se/ares_parse_soa_reply)
+  * [ares_parse_srv_reply](https://c-ares.haxx.se/ares_parse_srv_reply)
+  * [ares_parse_txt_reply](https://c-ares.haxx.se/ares_parse_txt_reply)
+  * [ares_parse_txt_reply_ext](https://c-ares.haxx.se/ares_parse_txt_reply_ext)
+  * [ares_process_fd](https://c-ares.haxx.se/ares_process_fd)
+  * [ares_save_options](https://c-ares.haxx.se/ares_save_options)
+  * [ares_search](https://c-ares.haxx.se/ares_search)
+  * [ares_send](https://c-ares.haxx.se/ares_send)
+  * [ares_set_local_dev](https://c-ares.haxx.se/ares_set_local_dev)
+  * [ares_set_servers](https://c-ares.haxx.se/ares_set_servers)
+  * [ares_set_servers_csv](https://c-ares.haxx.se/ares_set_servers_csv)
+  * [ares_set_servers_ports](https://c-ares.haxx.se/ares_set_servers_ports)
+  * [ares_set_servers_ports_csv](https://c-ares.haxx.se/ares_set_servers_ports_csv)
+  * [ares_set_socket_callback](https://c-ares.haxx.se/ares_set_socket_callback)
+  * [ares_set_socket_configure_callback](https://c-ares.haxx.se/ares_set_socket_configure_callback)
+  * [ares_set_sortlist](https://c-ares.haxx.se/ares_set_sortlist)
+  * [ares_timeout](https://c-ares.haxx.se/ares_timeout)
+  * [ares_version](https://c-ares.haxx.se/ares_version)
+
+The following functions are not bound, but don't need a binding because of the nature of Lua:
+
+  * [ares_destroy](https://c-ares.haxx.se/ares_destroy)
+  * [ares_destroy_options](https://c-ares.haxx.se/ares_destroy_options)
+  * [ares_strerror](https://c-ares.haxx.se/ares_strerror)
+  * [ares_free_data](https://c-ares.haxx.se/ares_free_data)
+  * [ares_free_hostent](https://c-ares.haxx.se/ares_free_hostent)
+  * [ares_free_string](https://c-ares.haxx.se/ares_free_string)
+  * [ares_library_cleanup](https://c-ares.haxx.se/ares_library_cleanup)
+  * [ares_library_init](https://c-ares.haxx.se/ares_library_init)
+  * [ares_library_init_mem](https://c-ares.haxx.se/ares_library_init_mem)
+  * [ares_library_initialized](https://c-ares.haxx.se/ares_library_initialized)
+
 ## No constants table for query statuses
 
 ## Unsupported options in the init function
