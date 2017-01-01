@@ -173,6 +173,21 @@ welcome!
 `ares.parse_a_reply` and friends should return TTL data, but they currently don't.
 Adding it as a second return value won't break existing code.
 
+## Resolve crappy coding
+
+  * `option_add_servers` - the servers array on the C side is allocated as a userdata, and we have no guarantee the GC won't clean it up before we're done with it.
+  * Use `ares_inet_*` functions for portability.
+  * Handle parsing errors in server option to init function.
+  * Handle other optmask mask fields not reflected in `ares_options` struct's fields.
+  * Handle option errors in init.
+  * Handle IP address parsing errors in `push_hostent`.
+  * Add GC cleanup for resolvers.
+  ** Make sure in-flight queries are handled properly.
+  * Clean up callback data when the query reply handler is called.
+  * Handle reply handler errors.
+  * Figure out global/coroutine state when sending `lua_State` to C-side reply handler.
+  * Think about when/if to call library cleanup routines.
+
 # License
 
 lua-ares is released under the same license as c-ares and Lua - the MIT/X license,
