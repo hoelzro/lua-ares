@@ -94,6 +94,14 @@ potentially calling the reply handler if the query has been completed.
 
 # To-do
 
+## Unbound Functions
+
+## No constants table for query statuses
+
+## Unsupported options in the init function
+
+## Parser functions don't return TTL information
+
 # License
 
 lua-ares is released under the same license as c-ares and Lua - the MIT/X license,
