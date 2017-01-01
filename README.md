@@ -78,6 +78,9 @@ bytes from the DNS reply.  `status` is a value that indicates the status or fail
 query; `timeouts` indicates how many times the query timed out, and the bytes are raw bytes
 that are meant to be decoded with a parser function such as `parse_a_reply`.
 
+Since `status` is currently just a raw number value, I wouldn't rely on it until the API
+for it gets more refined.
+
 ## resolver:fds()
 
 Returns a table of readable file descriptors, a table of writable file descriptors, and the
