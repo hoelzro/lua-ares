@@ -153,9 +153,22 @@ The following functions are not bound, but don't need a binding because of the n
 
 ## No constants table for query statuses
 
+The query statuses provided to the reply handler function used with `resolver:query`
+are just the raw number values provided to the handler on the C side - I need to add
+a lookup table to be able to handle these values, or perhaps just pass string values
+to the reply handler.  I wouldn't rely on the status value until this functionality
+gets fleshed out.
+
 ## Unsupported options in the init function
 
+Currently only the `servers` option works for init - the groundwork for fleshing out
+other options exists, though.  Contributions adding support for new options are most
+welcome!
+
 ## Parser functions don't return TTL information
+
+`ares.parse_a_reply` and friends should return TTL data, but they currently don't.
+Adding it as a second return value won't break existing code.
 
 # License
 
